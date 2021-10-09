@@ -1,5 +1,6 @@
 import 'package:finance/widgets/depChart.dart';
 import 'package:finance/widgets/label.dart';
+import 'package:finance/widgets/labelDrawer.dart';
 import 'package:finance/widgets/modalForm.dart';
 import 'package:finance/widgets/simpleChart.dart';
 import 'package:flutter/material.dart';
@@ -88,9 +89,9 @@ class _MainTreeState extends State<MainTree> {
     List<Widget> drawerList = [
       ...tokenMasterList
           .map(
-            (e) => Label(
-              token: e,
+            (e) => LabelDrawer(
               fn: removeLabel,
+              token: e,
             ),
           )
           .toList()
