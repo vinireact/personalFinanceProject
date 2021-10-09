@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class SimpleBarChart extends StatelessWidget {
   final List<Map<String, Object>> listMap;
-  SimpleBarChart({required this.listMap});
+  const SimpleBarChart({required this.listMap});
   @override
   Widget build(BuildContext context) {
     return new charts.BarChart(

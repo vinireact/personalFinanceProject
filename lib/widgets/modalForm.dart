@@ -2,7 +2,7 @@ import 'package:finance/widgets/myButton.dart';
 import 'package:flutter/material.dart';
 
 class ModalForm extends StatefulWidget {
-  Function(String, double)? fn;
+  final Function(String, double)? fn;
   ModalForm({required this.fn});
 
   @override
