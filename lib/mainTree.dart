@@ -84,11 +84,34 @@ class _MainTreeState extends State<MainTree> {
           )
           .toList()
     ];
+
+    List<Widget> drawerList = [
+      ...tokenMasterList
+          .map(
+            (e) => Label(
+              token: e,
+              fn: removeLabel,
+            ),
+          )
+          .toList()
+    ];
+
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        drawer: Drawer(
+          elevation: 4,
+          child: tokenMasterList.isEmpty
+              ? nullList
+              : Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListView.builder(
+                    itemCount: tokenMasterList.length,
+                    itemBuilder: (ctx, index) => drawerList[index],
+                  ),
+                ),
+        ),
         appBar: AppBar(
-          leading: const Icon(Icons.payments_outlined),
           title: const Text(
             'Controle financeiro',
             style: TextStyle(fontWeight: FontWeight.bold),
