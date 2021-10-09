@@ -4,7 +4,7 @@ class MyButton extends StatelessWidget {
   final String? txt;
   final Color? color;
   final Function()? fn;
-  MyButton({this.txt, this.color, this.fn});
+  const MyButton({this.txt, this.color, this.fn});
   @override
   Widget build(BuildContext context) {
     return Container(

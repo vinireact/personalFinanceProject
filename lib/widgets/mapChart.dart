@@ -4,7 +4,7 @@ class MapChart extends StatelessWidget {
   final double? value;
   final double? percent;
   final String? weekDay;
-  MapChart({this.value, this.percent, this.weekDay});
+  const MapChart({this.value, this.percent, this.weekDay});
 
   String get convertValue {
     if (value! <= 999.99) {
@@ -38,16 +38,16 @@ class MapChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               convertValue,
-              style: TextStyle(fontSize: 9),
+              style: const TextStyle(fontSize: 9),
             ),
             Container(
-              margin: EdgeInsets.only(top: 10, bottom: 10),
+              margin: const EdgeInsets.only(top: 10, bottom: 10),
               width: 20,
               height: 100,
               decoration: BoxDecoration(

@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 
 class SimpleChart extends StatelessWidget {
   final List<Token>? tokenMasterListFilter;
-  SimpleChart({this.tokenMasterListFilter});
+  const SimpleChart({this.tokenMasterListFilter});
 
   List<Map<String, Object>> listMap() => List.generate(
         7,

@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 
 class DepChart extends StatelessWidget {
   final List<Token>? tokenMasterListFilter;
-  DepChart({this.tokenMasterListFilter});
+  const DepChart({this.tokenMasterListFilter});
 
   List<Map<String, Object>> listMap() => List.generate(
         7,

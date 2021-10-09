@@ -11,23 +11,7 @@ class MainTree extends StatefulWidget {
 }
 
 class _MainTreeState extends State<MainTree> {
-  List<Token> tokenMasterList = [
-    Token(
-      title: 'Bitcoin',
-      value: 350.00,
-      date: DateTime.now().subtract(Duration(days: 3)),
-    ),
-    Token(
-      title: 'Farmácia',
-      value: 130.62,
-      date: DateTime.now().subtract(Duration(days: 6)),
-    ),
-    Token(
-      title: 'Lanche Facul',
-      value: 43.78,
-      date: DateTime.now().subtract(Duration(days: 2)),
-    )
-  ];
+  List<Token> tokenMasterList = [];
 
   void register(String txt, double value) {
     Token aux = Token(value: value, title: txt, date: DateTime.now());
@@ -104,13 +88,13 @@ class _MainTreeState extends State<MainTree> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.payments_outlined),
-          title: Text(
+          leading: const Icon(Icons.payments_outlined),
+          title: const Text(
             'Controle financeiro',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           actions: [IconButton(onPressed: openModal, icon: Icon(Icons.add))],
-          bottom: TabBar(
+          bottom: const TabBar(
             indicatorColor: Colors.white,
             tabs: [
               Tab(

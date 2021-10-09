@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 class Label extends StatelessWidget {
   final Token? token;
   final Function(String) fn;
-  Label({this.token, required this.fn});
+  const Label({this.token, required this.fn});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,8 +17,8 @@ class Label extends StatelessWidget {
           children: [
             Container(
               height: 30,
-              padding: EdgeInsets.only(left: 5, right: 5),
-              margin: EdgeInsets.only(left: 15, right: 15),
+              padding: const EdgeInsets.only(left: 5, right: 5),
+              margin: const EdgeInsets.only(left: 15, right: 15),
               decoration: BoxDecoration(
                 border: Border.all(width: 1, color: Colors.white),
                 borderRadius: BorderRadius.circular(5),
