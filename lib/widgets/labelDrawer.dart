@@ -45,7 +45,6 @@ class LabelDrawer extends StatelessWidget {
                         token!.title![2] +
                         token!.title![3] +
                         token!.title![4] +
-                        token!.title![5] +
                         '...',
                     style: TextStyle(
                       fontSize: 18,
