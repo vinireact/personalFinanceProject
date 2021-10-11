@@ -40,7 +40,9 @@ class Label extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    token!.title!,
+                    token!.title!.isEmpty
+                        ? '( Título indefinido )'
+                        : token!.title!,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

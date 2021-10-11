@@ -40,12 +40,15 @@ class LabelDrawer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    token!.title![0] +
-                        token!.title![1] +
-                        token!.title![2] +
-                        token!.title![3] +
-                        token!.title![4] +
-                        '...',
+                    token!.title!.isEmpty
+                        ? '( Indefinido )'
+                        : token!.title![0] +
+                            token!.title![1] +
+                            token!.title![2] +
+                            token!.title![3] +
+                            token!.title![4] +
+                            token!.title![5] +
+                            '...',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
