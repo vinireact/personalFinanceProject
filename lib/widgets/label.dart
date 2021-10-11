@@ -40,19 +40,19 @@ class Label extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    token!.title!.isEmpty
-                        ? '( Título indefinido )'
-                        : token!.title!,
+                    token!.title!.isEmpty ? '( Título )' : token!.title!,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
                   ),
-                  Text(
-                    DateFormat('dd MMM y').format(token!.date!),
-                    style: TextStyle(color: Colors.grey),
-                  ),
+                  token!.title!.isEmpty
+                      ? Container()
+                      : Text(
+                          DateFormat('dd MMM y').format(token!.date!),
+                          style: TextStyle(color: Colors.grey),
+                        ),
                 ],
               ),
             ),

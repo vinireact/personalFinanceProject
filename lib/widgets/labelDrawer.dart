@@ -41,13 +41,12 @@ class LabelDrawer extends StatelessWidget {
                 children: [
                   Text(
                     token!.title!.isEmpty
-                        ? '( Indefinido )'
+                        ? '( Título )'
                         : token!.title![0] +
                             token!.title![1] +
                             token!.title![2] +
                             token!.title![3] +
                             token!.title![4] +
-                            token!.title![5] +
                             '...',
                     style: TextStyle(
                       fontSize: 18,
@@ -55,10 +54,12 @@ class LabelDrawer extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  Text(
-                    DateFormat('dd MMM').format(token!.date!),
-                    style: TextStyle(color: Colors.grey),
-                  ),
+                  token!.title!.isEmpty
+                      ? Container()
+                      : Text(
+                          DateFormat('dd MMM').format(token!.date!),
+                          style: TextStyle(color: Colors.grey),
+                        ),
                 ],
               ),
             ),
